@@ -41,6 +41,27 @@
             var message = '';
             if (fn(emailAddress)) {
                 event.target.setCustomValidity('');
+
+                //Start of chap13 Silver Challenge
+                var SERVER_URL = 'http://localhost:3002/coffeeorders';
+                $.get(SERVER_URL, function(serverResponse) {
+                    var emailList = [];
+                    for (var i in serverResponse){
+                        emailList.push(serverResponse[i].emailAddress);
+                    }
+
+                    if(emailList.indexOf(emailAddress) != -1)
+                    {
+                        message = 'Email already in used !!!';
+                        event.target.setCustomValidity(message);
+                    }
+
+                    else {
+                        event.target.setCustomValidity('');
+                    }
+                });
+                //End of chap13 Silver Challenge
+
             } else {
                 message = emailAddress + ' is not an authorized email address!';
                 event.target.setCustomValidity(message);

@@ -10,7 +10,14 @@
         this.serverUrl = url;
     }
 
+    // RemoteDataStore.prototype.add = function (key, val) {
+    //     return $.post(this.serverUrl, val, function (serverResponse) {
+    //         console.log(serverResponse);
+    //     });
+    // };
+
     RemoteDataStore.prototype.add = function (key, val) {
+        val.id = val.emailAddress;  // set id = email
         return $.post(this.serverUrl, val, function (serverResponse) {
             console.log(serverResponse);
         });

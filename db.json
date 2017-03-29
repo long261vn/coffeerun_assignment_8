@@ -1,0 +1,28 @@
+{
+  "coffeeorders": [
+    {
+      "coffee": "coffee",
+      "emailAddress": "long@bignerdranch.com",
+      "size": "tall",
+      "flavor": "",
+      "strength": "30",
+      "id": "long@bignerdranch.com"
+    },
+    {
+      "coffee": "coffee",
+      "emailAddress": "aaaaa@bignerdranch.com",
+      "size": "grande",
+      "flavor": "almond",
+      "strength": "49",
+      "id": "aaaaa@bignerdranch.com"
+    },
+    {
+      "coffee": "milk",
+      "emailAddress": "ggg@bignerdranch.com",
+      "size": "short",
+      "flavor": "almond",
+      "strength": "9",
+      "id": "ggg@bignerdranch.com"
+    }
+  ]
+}
